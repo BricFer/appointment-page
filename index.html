@@ -16,6 +16,7 @@
 
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
 </head>
+
 <body>
     <header class="hero">
         <nav class="nav flex">
@@ -30,14 +31,19 @@
                     <p class="item__text">Home</p>
                 </a>
 
+                <a href="#about" class="item flex">
+                    <img src="assets/icons/about.svg" alt="note icon" class="item__img">
+                    <p class="item__text">About</p>
+                </a>
+
                 <a href="#appointment" class="item flex">
                     <img src="assets/icons/calendar.svg" alt="calendar icon" class="item__img">
                     <p class="item__text">Appointment</p>
                 </a>
 
-                <a href="#about" class="item flex">
-                    <img src="assets/icons/about.svg" alt="note icon" class="item__img">
-                    <p class="item__text">About</p>
+                <a href="contact.html" class="item flex">
+                    <img src="assets/icons/contact.svg" alt="contact icon" class="item__img">
+                    <p class="item__text">Contact</p>
                 </a>
             </div>
         </nav>
@@ -91,15 +97,15 @@
                 <label for="onsite" class="label">En estudio</label>
             </div>
 
-            <div class="location__option flex">
+            <div class="flex column">
                 <!--Cuando se seleccione esta opción ha de salir un input donde introducir la direccion-->
-                <input type="radio" name="location" id="outdoors">
-                <label for="outdoors" class="label">Otra ubicación</label>
+                <div class="location__option flex">
+                    <input type="radio" name="location" id="outdoors">
+                    <label for="outdoors" class="label">Otra ubicación</label>
+                </div>
             </div>
 
             <!--En cualquiera de las opciones el contenido ha de contraerse y dar la opción de modificar.-->
-
-            <!-- <button type="button" class="btn" id="save">Guardar</button> -->
         </div>
         <div id="appointment">
             <h2 class="appointment__title">Selecciona día y hora</h2>

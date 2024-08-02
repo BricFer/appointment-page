@@ -11,9 +11,6 @@
 
     --flex-direction: column;
 }
-/* * {
-    outline: 0.1rem solid crimson;
-} */
 html {
     box-sizing: border-box;
     font-size: 62.5%;
@@ -21,7 +18,6 @@ html {
 *, *::after, *::before {
     box-sizing: inherit;
 }
-
 body {
     font-size: 16px;
     font-family: "Poppins", sans-serif;
@@ -39,7 +35,12 @@ h2 {
 .flex {
     display: flex;
 }
-
+.column {
+    flex-direction: column;
+}
+.hidden {
+    display: none;
+}
 /*Navbar*/
 .nav {
     flex-direction: column;
@@ -81,7 +82,7 @@ h2 {
     margin: auto auto 5rem auto;
 }
 
-/*Buttoms*/
+/*Buttons*/
 .btn {
     border: none;
     height: 5rem;
@@ -98,7 +99,7 @@ h2 {
 .btn:hover {
     cursor: pointer;
     background: rgb(133,118,255);
-    background: linear-gradient(90deg, rgba(133,118,255,0.5) 30%, rgba(123,201,255,1) 100%);
+    background: linear-gradient(90deg, rgba(123,201,255,0.5) 30%, rgba(133,118,255,0.8) 100%);
     color: var(--light);
 }
 .btn:disabled {
@@ -125,6 +126,9 @@ h2 {
 }
 .mandatory {
     color: var(--red);
+}
+.emptyField {
+    margin-left: auto;
 }
 .form__field {
     display: flex;
@@ -159,15 +163,18 @@ h2 {
 .location__option {
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
     gap: 1rem;
+}
+.editable__field {
+    height: 7rem;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 5px -3px rgba(28,22,120,0.1);
 }
 .newLocation__text {
     resize: none;
     height: 25rem;
-    width: 100%;
-    outline: none;
     border-radius: 2rem;
-    border: 0.1rem solid var(--purple);
     padding: 2rem;
     color: rgba(28, 22, 120,0.65);
 }
