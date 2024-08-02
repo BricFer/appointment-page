@@ -51,103 +51,105 @@
 
     <main class="container">
 
-        <div class="info">
-            <h2 class="info__title">Datos de reserva</h2>
+        <form class="form flex">
 
-            <!--Al completar esta sección ha de contraerse, y habilitar un boton para poder modificar-->
-            <form class="form flex">
-                <div class="form__field">
-                    <label for="fname" class="label">Nombre(s)<sup class="mandatory">*</sup></label>
-                    <input type="text" class="input" name="fname" id="fname" required>
+            <fieldset class="info fieldset">
+                <legend class="legend">Datos de reserva</legend>
+
+                <div class="info__fields flex">
+                    <div class="info__field">
+                        <label for="fname" class="label">Nombre(s)<sup class="mandatory">*</sup></label>
+                        <input type="text" class="input" name="fname" id="fname" required>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="lname" class="label">Apellido(s)<sup class="mandatory">*</sup></label>
+                        <input type="text" class="input" name="lname" id="lname" required>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="prefix">Prefijo<sup class="mandatory">*</sup></label>
+                        <select name="prefix" id="prefix" class="input select">
+                            <option value="default" disabled selected>Selecciona una opcion</option>
+                            <option value="prefix">Argentina (+54)</option>
+                            <option value="prefix">Chile (+56)</option>
+                            <option value="prefix">Colombia (+57)</option>
+                            <option value="prefix">España (+34)</option>
+                            <option value="prefix">USA (+1)</option>
+                            <option value="prefix">Venezuela (+58)</option>
+                        </select>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="phone" class="label">Teléfono<sup class="mandatory">*</sup></label>
+                        <input type="tel" class="input" name="phone" id="phone" required>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="email" class="label">E-mail</label>
+                        <input type="email" class="input" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+                    </div>
                 </div>
+            </fieldset>
 
-                <div class="form__field">
-                    <label for="lname" class="label">Apellido(s)<sup class="mandatory">*</sup></label>
-                    <input type="text" class="input" name="lname" id="lname" required>
+            <fieldset class="location fieldset flex">
+                <legend class="legend">Confirmación de ubicación</legend>
+    
+                <div class="location__option flex">
+                    <input type="radio" name="location" id="onsite">
+                    <label for="onsite" class="label">En estudio</label>
                 </div>
-
-                <div class="form__field">
-                    <label for="country">Prefijo<sup class="mandatory">*</sup></label>
-                    <select name="prefix" id="prefix" class="input select">
-                        <option value="default" disabled selected>Selecciona una opcion</option>
-                        <option value="prefix">Argentina (+54)</option>
-                        <option value="prefix">Chile (+56)</option>
-                        <option value="prefix">Colombia (+57)</option>
-                        <option value="prefix">España (+34)</option>
-                        <option value="prefix">USA (+1)</option>
-                        <option value="prefix">Venezuela (+58)</option>
-                    </select>
-                </div>
-                <div class="form__field">
-                    <label for="phone" class="label">Teléfono<sup class="mandatory">*</sup></label>
-                    <input type="tel" class="input" name="phone" id="phone" required>
-                </div>
-
-                <div class="form__field">
-                    <label for="email" class="label">E-mail</label>
-                    <input type="email" class="input" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
-                </div>
-            </form>
-        </div>
-        <div class="location__info flex">
-            <h2 class="location section">Confirmación de ubicación</h2>
-
-            <div class="location__option flex">
-                <input type="radio" name="location" id="onsite">
-                <label for="onsite" class="label">En estudio</label>
-            </div>
-
-            <div class="flex column">
-                <!--Cuando se seleccione esta opción ha de salir un input donde introducir la direccion-->
+    
                 <div class="location__option flex">
                     <input type="radio" name="location" id="outdoors">
                     <label for="outdoors" class="label">Otra ubicación</label>
                 </div>
-            </div>
+            </fieldset>
 
-            <!--En cualquiera de las opciones el contenido ha de contraerse y dar la opción de modificar.-->
-        </div>
-        <div id="appointment">
-            <h2 class="appointment__title">Selecciona día y hora</h2>
-            
-            <div class="appointment__calendar">
-
-                <div id="calendar"></div>
-                <div class="availability flex">
-                    <div class="availability__morning">
-                        <h3 class="availability__header">Mañana</h3>
-
-                        <div class="available__hours flex">
-                            <p class="available__hour">08.00</p>
-                            <p class="available__hour">08.30</p>
-                            <p class="available__hour">09.00</p>
-                            <p class="available__hour">09.30</p>
-                            <p class="available__hour">10.00</p>
-                            <p class="available__hour">10.30</p>
-                            <p class="available__hour">11.00</p>
-                            <p class="available__hour">11.30</p>
-                            <p class="available__hour">12.00</p>
+            <fieldset class="fieldset" id="appointment">
+                <legend class="legend">Selecciona día y hora</legend>
+                
+                <div class="appointment__calendar">
+                    
+                    <div id="calendar"></div>
+                    <div class="availability flex">
+                        <div class="availability__morning">
+                            <h3 class="availability__header">Mañana</h3>
+        
+                            <div class="available__hours flex">
+                                <p class="available__hour">08.00</p>
+                                <p class="available__hour">08.30</p>
+                                <p class="available__hour">09.00</p>
+                                <p class="available__hour">09.30</p>
+                                <p class="available__hour">10.00</p>
+                                <p class="available__hour">10.30</p>
+                                <p class="available__hour">11.00</p>
+                                <p class="available__hour">11.30</p>
+                                <p class="available__hour">12.00</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="availability__afternoon">
-                        <h3 class="availability__header">Tarde</h3>
-
-                        <div class="available__hours flex">
-                            <p class="available__hour">13.00</p>
-                            <p class="available__hour">13.30</p>
-                            <p class="available__hour">14.00</p>
-                            <p class="available__hour">14.30</p>
-                            <p class="available__hour">15.00</p>
-                            <p class="available__hour">15.30</p>
-                            <p class="available__hour">16.00</p>
-                            <p class="available__hour">16.30</p>
-                            <p class="available__hour">17.00</p>
+        
+                        <div class="availability__afternoon">
+                            <h3 class="availability__header">Tarde</h3>
+        
+                            <div class="available__hours flex">
+                                <p class="available__hour">13.00</p>
+                                <p class="available__hour">13.30</p>
+                                <p class="available__hour">14.00</p>
+                                <p class="available__hour">14.30</p>
+                                <p class="available__hour">15.00</p>
+                                <p class="available__hour">15.30</p>
+                                <p class="available__hour">16.00</p>
+                                <p class="available__hour">16.30</p>
+                                <p class="available__hour">17.00</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </fieldset>
+        
+            <button type="submit" class="btn save">Guardar</button>
+        </form>
     </main>
 
     <script src="scripts/scriptMain.js"></script>
