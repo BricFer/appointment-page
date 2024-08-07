@@ -1,0 +1,20 @@
+.negrita {
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.location__map {
+    justify-content: space-between;
+    align-items: center;
+}
+.schedule__title {
+    color: rgba(55, 55, 55, .55);
+}
+.schedule__texts {
+    gap: 8rem;
+    padding: 2rem;
+    border-bottom: 0.2rem solid rgba(55, 55, 55, .45);
+}
+.additional {
+    flex-direction: column;
+    gap: 2rem;
+}
