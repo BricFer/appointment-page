@@ -11,7 +11,7 @@
 }
 .schedule__texts {
     gap: 8rem;
-    padding: 2rem;
+    padding: 2rem auto;
     border-bottom: 0.2rem solid rgba(55, 55, 55, .45);
 }
 .additional {
