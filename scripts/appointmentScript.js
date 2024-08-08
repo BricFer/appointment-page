@@ -21,32 +21,16 @@ inputsLocation[0].addEventListener('click', ()=> {
 });
 
 inputsLocation[1].addEventListener('click', ()=> {
-    removeArea();
+    removeArea('#newLocation');
     createTextArea(inputsLocation[1]);
 })
 /*INPUTS */
-const createTextArea = (input) => {
-    let inputId = input.getAttribute('id'); 
+const createTextArea = (inputElement) => {
+    let inputId = inputElement.getAttribute('id'); 
     let parentElement = document.querySelector(`#${inputId}`).parentElement;
-    //Elements
-    let textArea = document.createElement('textarea');
-    let title = document.createElement('h3');
-    let locationDetails = document.createElement('div');
     
-    //Attributes
-    textArea.setAttribute('class','newLocation__text input');
-    textArea.setAttribute('maxlength','150');
-    textArea.attributes.required = 'required';
-    title.setAttribute('class', 'title');
-    locationDetails.setAttribute('id', 'newLocation');
-
-    //Additional info
-    title.textContent = 'Nueva dirección'
-
-    //Append
-    locationDetails.appendChild(title);
-    locationDetails.appendChild(textArea);
-    parentElement.appendChild(locationDetails);
+    parentElement.insertAdjacentHTML('afterend',`
+        <textarea id="newLocation" class="newLocation__text input" maxlength="150" placeholder="Introduce la nueva dirección" required></textarea>`);
 }
 
 const removeArea = (element) => {
@@ -58,5 +42,23 @@ const removeArea = (element) => {
 }
 
 const emptyFieldsChek = (input) => {
-
+    let inputValue = input.value;
+    let inputMandatory = input.getAttribute('required');
+    let siblingElement = input.nextElementSibling;
+    
+    if(siblingElement !== null) {
+        siblingElement.remove();
+    }
+    if((inputValue === "" ||  inputValue === "default") && inputMandatory!== null) {
+        input.insertAdjacentHTML('afterend', `
+            <p class="mandatory__text"><sup>*</sup>Este campo es obligatorio</p>`);
+    }
 }
+
+btn.addEventListener('click', () =>
+    
+    inputs.forEach((input) => {
+        
+        emptyFieldsChek(input);
+    })
+)

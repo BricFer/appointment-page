@@ -24,10 +24,10 @@
             </a>
 
             <div class="items flex">
-                <a href="index.html" class="item">Home</a>
-                <a href="about.html" class="item">About</a>
-                <a href="appointment.html" class="item">Appointment</a>
-                <a href="contact.html" class="item">Contact</a>
+                <a href="index.html" class="item">Inicio</a>
+                <a href="about.html" class="item">Nosotrxs</a>
+                <a href="appointment.html" class="item">Citas</a>
+                <a href="contact.html" class="item">Contacto</a>
             </div>
         </nav>
     </header>
@@ -52,7 +52,7 @@
         
                     <div class="info__field">
                         <label for="prefix">Prefijo<sup class="mandatory">*</sup></label>
-                        <select name="prefix" id="prefix" class="input select">
+                        <select name="prefix" id="prefix" class="input select" required>
                             <option value="default" disabled selected>Selecciona una opcion</option>
                             <option value="prefix">Argentina (+54)</option>
                             <option value="prefix">Chile (+56)</option>
@@ -82,7 +82,7 @@
                     <input type="radio" name="location" id="onsite">
                     <label for="onsite" class="label">En estudio</label>
                 </div>
-    
+        
                 <div class="location__option flex">
                     <input type="radio" name="location" id="outdoors">
                     <label for="outdoors" class="label">Otra ubicación</label>
@@ -135,7 +135,81 @@
         </form>
     </main>
 
-    <script src="scripts/scriptMain.js"></script>
+    <footer class="footer flex">
+
+        <div class="index__footer flex column">
+            <a href="index.html" class="logo footer__logo">
+                <img src="assets/dark-logo.png" alt="Logo" class="logo__img">
+            </a>
+
+            <div class="socialMedia flex">
+                <a href="https://www.https://www.instagram.com/" class="social__link">
+                    <img src="assets/icons/instagram.svg" alt="instagram icon" class="social__img">
+                </a>
+    
+                <a href="https://www.https://www.facebook.com/" class="social__link">
+                    <img src="assets/icons/facebook.svg" alt="facebook icon" class="social__img">
+                </a>
+    
+                <a href="https://twitter.com/?lang=es" class="social__link">
+                    <img src="assets/icons/twitter.svg" alt="twitter icon" class="social__img">
+                </a>
+            </div>
+
+        </div>
+
+        <div class="contact__items flex column">
+            <div class="contact__item flex">
+                <img src="assets/icons/mail.svg" alt="email icon" class="contact__img">
+                <p class="contact__text">example@example.com</p>
+            </div>
+
+            <div class="contact__item flex">
+                <img src="assets/icons/phone.svg" alt="phone icon" class="contact__img">
+                <p class="contact__text">(+34) 123 456 789</p>
+            </div>
+
+            <div class="contact__item flex">
+                <img src="assets/icons/location.svg" alt="location icon" class="contact__img">
+                <div class="contact__text">
+                    <p class="contact__text">Av. del Aprendizaje 1</p>
+                    <p class="contact__text">290909</p>
+                    <p class="contact__text">Malaga, Spain</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="policies flex column">
+
+            <div class="policy__element flex">
+                <img src="assets/icons/right-arrow.svg" alt="right arrow image" class="arrow">
+                <a href="#" class="policies__link">Aviso legal</a>
+            </div>
+            <div class="policy__element flex">
+                <img src="assets/icons/right-arrow.svg" alt="right arrow image" class="arrow">
+                <a href="#" class="policies__link">Política de privacidad</a>
+            </div>
+            <div class="policy__element flex">
+                <img src="assets/icons/right-arrow.svg" alt="right arrow image" class="arrow">
+                <a href="#" class="policies__link">Aviso de privacidad</a>
+            </div>
+
+            <div class="policy__element flex">
+                <img src="assets/icons/right-arrow.svg" alt="right arrow image" class="arrow">
+                <a href="#" class="policies__link">Política de cookies</a>
+            </div>
+        </div>
+
+        <div class="newsletter flex column">
+            <h2 class="newsletter__text">Suscribete a nuestra newsletter</h2>
+            <form class="newsletter__form flex">
+                <input type="email" name="nemail" id="nemail" placeholder="Dirección de correo">
+                <button type="submit" class="btn texto">Suscribirme</button>
+            </form>
+        </div>
+    </footer>
+
+    <script src="scripts/appointmentScript.js"></script>
     <script src="scripts/script_full_calendar.js"></script>
 </body>
 </html>
