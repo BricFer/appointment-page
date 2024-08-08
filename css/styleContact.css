@@ -1,0 +1,49 @@
+.negrita {
+    font-weight: 600;
+    letter-spacing: .1rem;
+}
+.location {
+    border-bottom: 0.2rem solid var(--darkish_55);
+    padding: 1rem;
+}
+.location__map {
+    flex-direction: column;
+}
+#map {
+    margin-top: 2rem;
+    height: 50rem;
+    width: 100%;
+}
+.location__texts {
+    flex-direction: column;
+    gap: 2rem;
+}
+.location__address, .schedule__title {
+    color: var(--darkish_55)
+}
+.schedule__texts {
+    gap: 8rem;
+    padding: 2rem auto;
+}
+.additional {
+    flex-direction: column;
+    gap: 2rem;
+}
+#whatsapp {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .location__map {
+        width: 100%;
+        gap: 2rem;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #map {
+        width: 50%;
+    }
+    .location__texts {
+        width: 50%;
+    }
+}

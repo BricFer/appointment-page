@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+</head>
+
+<body>
+    <header class="hero">
+        <nav class="nav flex">
+
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Logo" class="logo__img">
+            </a>
+
+            <div class="items flex">
+                <a href="index.html" class="item">Home</a>
+                <a href="about.html" class="item">About</a>
+                <a href="appointment.html" class="item">Appointment</a>
+                <a href="contact.html" class="item">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <form class="form flex">
+
+            <fieldset class="info fieldset">
+                <legend class="legend">Datos de reserva</legend>
+
+                <div class="info__fields flex">
+                    <div class="info__field">
+                        <label for="fname" class="label">Nombre(s)<sup class="mandatory">*</sup></label>
+                        <input type="text" class="input" name="fname" id="fname" required>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="lname" class="label">Apellido(s)<sup class="mandatory">*</sup></label>
+                        <input type="text" class="input" name="lname" id="lname" required>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="prefix">Prefijo<sup class="mandatory">*</sup></label>
+                        <select name="prefix" id="prefix" class="input select">
+                            <option value="default" disabled selected>Selecciona una opcion</option>
+                            <option value="prefix">Argentina (+54)</option>
+                            <option value="prefix">Chile (+56)</option>
+                            <option value="prefix">Colombia (+57)</option>
+                            <option value="prefix">España (+34)</option>
+                            <option value="prefix">USA (+1)</option>
+                            <option value="prefix">Venezuela (+58)</option>
+                        </select>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="phone" class="label">Teléfono<sup class="mandatory">*</sup></label>
+                        <input type="tel" class="input" name="phone" id="phone" required>
+                    </div>
+        
+                    <div class="info__field">
+                        <label for="email" class="label">E-mail</label>
+                        <input type="email" class="input" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="location__container fieldset flex">
+                <legend class="legend">Confirmación de ubicación</legend>
+    
+                <div class="location__option flex">
+                    <input type="radio" name="location" id="onsite">
+                    <label for="onsite" class="label">En estudio</label>
+                </div>
+    
+                <div class="location__option flex">
+                    <input type="radio" name="location" id="outdoors">
+                    <label for="outdoors" class="label">Otra ubicación</label>
+                </div>
+            </fieldset>
+
+            <fieldset class="fieldset" id="appointment">
+                <legend class="legend">Selecciona día y hora</legend>
+                
+                <div class="appointment__calendar">
+                    
+                    <div id="calendar"></div>
+                    <div class="availability flex">
+                        <div class="availability__morning">
+                            <h3 class="availability__header">Mañana</h3>
+        
+                            <div class="available__hours flex">
+                                <p class="available__hour">08.00</p>
+                                <p class="available__hour">08.30</p>
+                                <p class="available__hour">09.00</p>
+                                <p class="available__hour">09.30</p>
+                                <p class="available__hour">10.00</p>
+                                <p class="available__hour">10.30</p>
+                                <p class="available__hour">11.00</p>
+                                <p class="available__hour">11.30</p>
+                                <p class="available__hour">12.00</p>
+                            </div>
+                        </div>
+        
+                        <div class="availability__afternoon">
+                            <h3 class="availability__header">Tarde</h3>
+        
+                            <div class="available__hours flex">
+                                <p class="available__hour">13.00</p>
+                                <p class="available__hour">13.30</p>
+                                <p class="available__hour">14.00</p>
+                                <p class="available__hour">14.30</p>
+                                <p class="available__hour">15.00</p>
+                                <p class="available__hour">15.30</p>
+                                <p class="available__hour">16.00</p>
+                                <p class="available__hour">16.30</p>
+                                <p class="available__hour">17.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        
+            <button type="submit" class="btn save">Guardar</button>
+        </form>
+    </main>
+
+    <script src="scripts/scriptMain.js"></script>
+    <script src="scripts/script_full_calendar.js"></script>
+</body>
+</html>
