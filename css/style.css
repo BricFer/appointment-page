@@ -4,6 +4,7 @@
     --darkish: #373737;
     --secondary: #DCD0C0;
     --primary: #C0B283;
+    --darkish_55: rgba(55, 55, 55, .55);
 
     --titles-font: "Raleway", sans-serif;
     --body-font: "Roboto Condensed", sans-serif;
@@ -24,6 +25,7 @@ body {
 }
 a {
     text-decoration: none;
+    color: var(--darkish);
 }
 a:visited {
     color: var(--darkish)
@@ -99,7 +101,7 @@ h2 {
 .btn:hover {
     cursor: pointer;
     color: var(--light);
-    background: #373737;
+    background: var(--darkish);
     background: linear-gradient(90deg, rgba(55,55,55,1) 30%, rgba(192,178,131,1) 100%);
 }
 .btn:disabled {
@@ -257,6 +259,12 @@ tr {
     font-weight: 500;
 }
 
+/* FOOTER */
+.footer {
+    background: var(--darkish);
+    padding: 2rem;
+    height: 25rem;
+}
 /*MEDIA QUERIES*/
 @media (min-width: 768px) {
     .nav {
