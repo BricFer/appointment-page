@@ -12,55 +12,45 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        body {
-            height: 100vh;
-            position: relative;
-        }
-        .footer {
-            position: absolute;
-            bottom: 0;
-        }
-    </style>
 </head>
-<body>
+<body class="index flex column">
+
     <header class="hero">
         <nav class="nav flex">
 
             <a href="index.html" class="logo">
-                <img src="assets/logo.png" alt="Logo" class="logo__img">
+                <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
             </a>
 
             <div class="items flex">
-                <a href="index.html" class="item">Inicio</a>
-                <a href="about.html" class="item">Nosotrxs</a>
-                <a href="appointment.html" class="item">Citas</a>
-                <a href="contact.html" class="item">Contacto</a>
+                <a href="appointment.html" class="appointment__link btn">
+                    Agendar
+                </a>
+
+                <div class="menu__icon">
+                    <img src="assets/icons/menu-icon.svg" alt="menu icon">
+                </div>
             </div>
         </nav>
     </header>
 
-    <main class="container">
-        <h1 class="title">  this page is being built</h1>
-    </main>
-
-    <footer class="footer flex">
+    <footer class="index footer flex">
 
         <div class="index__footer flex column">
             <a href="index.html" class="logo footer__logo">
-                <img src="assets/dark-logo.png" alt="Logo" class="logo__img">
+                <img src="assets/logo/dark-logo.png" alt="Logo" class="logo__img">
             </a>
 
-            <div class="socialMedia flex">
-                <a href="https://www.https://www.instagram.com/" class="social__link">
+            <div class="social-media flex">
+                <a href="https://www.instagram.com/" class="social__link" target="_blank">
                     <img src="assets/icons/instagram.svg" alt="instagram icon" class="social__img">
                 </a>
     
-                <a href="https://www.https://www.facebook.com/" class="social__link">
+                <a href="https://www.facebook.com/" class="social__link" target="_blank">
                     <img src="assets/icons/facebook.svg" alt="facebook icon" class="social__img">
                 </a>
     
-                <a href="https://twitter.com/?lang=es" class="social__link">
+                <a href="https://twitter.com/?lang=es" class="social__link" target="_blank">
                     <img src="assets/icons/twitter.svg" alt="twitter icon" class="social__img">
                 </a>
             </div>

@@ -19,10 +19,26 @@ html {
     box-sizing: inherit;
 }
 body {
+    position: relative;
     font-size: 16px;
     font-family: var(--body-font);
-    padding: 1rem;
     color: var(--darkish);
+    height: 100vh;
+}
+
+body.index::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(../assets/bg/front-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .7;
+    z-index: -1;
 }
 a {
     text-decoration: none;
@@ -55,6 +71,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     margin-bottom: 7rem;
+    padding: 1rem;
 }
 .logo__img {
     display: block;
@@ -80,6 +97,9 @@ h2 {
     color: var(--secondary);
     border-radius: 1rem;
 }
+.appointment__link {
+    text-align: center;
+}
 
 /*Container*/
 .container {
@@ -87,6 +107,12 @@ h2 {
     flex-direction: column;
     gap: 5rem;
     margin: auto auto 5rem auto;
+    width: 100%;
+}
+.img{
+    display: block;
+    width: 100%;
+    height: 100vh;
 }
 
 /*Buttons*/
@@ -276,6 +302,7 @@ tr {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin: auto;
 }
 .index__footer {
     width: 20rem;
@@ -288,7 +315,7 @@ tr {
     border: 0.3rem solid var(--primary);
     border-image: linear-gradient(to top, var(--primary), var(--darkish)) 1 100%;
 }
-.socialMedia {
+.social-media {
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
@@ -391,6 +418,10 @@ tr {
         flex-wrap: wrap;
         gap: 1rem;
         justify-content: space-between;
+    }
+    footer.index {
+        position: absolute;
+        bottom: 0;
     }
     .contact__items, .policies {
         width: auto;
