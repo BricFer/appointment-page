@@ -16,23 +16,52 @@
 <body class="index flex column">
 
     <header class="hero">
-        <nav class="nav flex">
+        <nav class="nav index">
 
+            <a href="index.html" class="logo flex">
+                <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
+            </a>
+
+            <div class="items index flex">
+                <a href="appointment.html" class="appointment__link btn">
+                    Agendar
+                </a>
+
+                <img class="menu__icon" src="assets/icons/menu-icon.svg" alt="menu icon">
+            </div>
+        </nav>
+    </header>
+
+    <main class="index">
+        <img class="close-btn hidden" src="assets/icons/close-btn.svg" alt="close buttom">
+
+        <div class="expanded-menu flex hidden">
             <a href="index.html" class="logo">
                 <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
             </a>
 
             <div class="items flex">
-                <a href="appointment.html" class="appointment__link btn">
-                    Agendar
-                </a>
-
-                <div class="menu__icon">
-                    <img src="assets/icons/menu-icon.svg" alt="menu icon">
-                </div>
+                <a href="index.html" class="item">Inicio</a>
+                <a href="about.html" class="item">Nosotrxs</a>
+                <a href="appointment.html" class="item">Citas</a>
+                <a href="contact.html" class="item">Contacto</a>
             </div>
-        </nav>
-    </header>
+
+            <div class="index-media flex">
+                <a href="https://www.instagram.com/" class="social__link" target="_blank">
+                    <img src="assets/icons/instagram.svg" alt="instagram icon" class="social__img">
+                </a>
+    
+                <a href="https://www.facebook.com/" class="social__link" target="_blank">
+                    <img src="assets/icons/facebook.svg" alt="facebook icon" class="social__img">
+                </a>
+    
+                <a href="https://twitter.com/?lang=es" class="social__link" target="_blank">
+                    <img src="assets/icons/twitter.svg" alt="twitter icon" class="social__img">
+                </a>
+            </div>
+        </div>
+    </main>
 
     <footer class="index footer flex">
 
@@ -107,5 +136,7 @@
             </form>
         </div>
     </footer>
+
+    <script src="scripts/index.js"></script>
 </body>
 </html>
