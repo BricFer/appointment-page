@@ -1,0 +1,40 @@
+/*ESTILOS INDEX*/
+body.index::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(../assets/bg/front-page.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: .7;
+    z-index: -1;
+}
+.appointment__link {
+    display: none;
+}
+main.index {
+    height: 50rem;
+}
+.index__footer {
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+@media (min-width: 768px) {
+    body.index {
+        height: 100vh;
+    }
+    footer.index {
+        position: absolute;
+        bottom: 0;
+    }
+    .appointment__link {
+        display: block;
+        text-align: center;
+    }
+}

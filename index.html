@@ -10,19 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gen-styles.css">
+    <link rel="stylesheet" href="css/index-styles.css">
 
 </head>
 <body class="index flex column">
 
-    <header class="hero">
-        <nav class="nav index">
+    <header class="hero flex">
+        <a href="index.html" class="logo">
+            <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
+        </a>
 
-            <a href="index.html" class="logo flex">
-                <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
-            </a>
+        <nav class="nav flex">
+            <div class="items items--remove flex">
 
-            <div class="items index flex">
                 <a href="appointment.html" class="appointment__link btn">
                     Agendar
                 </a>
@@ -32,40 +33,13 @@
         </nav>
     </header>
 
-    <main class="index">
-        <img class="close-btn hidden" src="assets/icons/close-btn.svg" alt="close buttom">
-
-        <div class="expanded-menu flex hidden">
-            <a href="index.html" class="logo">
-                <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
-            </a>
-
-            <div class="items flex">
-                <a href="index.html" class="item">Inicio</a>
-                <a href="about.html" class="item">Nosotrxs</a>
-                <a href="appointment.html" class="item">Citas</a>
-                <a href="contact.html" class="item">Contacto</a>
-            </div>
-
-            <div class="index-media flex">
-                <a href="https://www.instagram.com/" class="social__link" target="_blank">
-                    <img src="assets/icons/instagram.svg" alt="instagram icon" class="social__img">
-                </a>
-    
-                <a href="https://www.facebook.com/" class="social__link" target="_blank">
-                    <img src="assets/icons/facebook.svg" alt="facebook icon" class="social__img">
-                </a>
-    
-                <a href="https://twitter.com/?lang=es" class="social__link" target="_blank">
-                    <img src="assets/icons/twitter.svg" alt="twitter icon" class="social__img">
-                </a>
-            </div>
-        </div>
+    <main class="index container">
+        
     </main>
 
     <footer class="index footer flex">
 
-        <div class="index__footer flex column">
+        <div class="footer__icons flex column">
             <a href="index.html" class="logo footer__logo">
                 <img src="assets/logo/dark-logo.png" alt="Logo" class="logo__img">
             </a>
@@ -137,6 +111,6 @@
         </div>
     </footer>
 
-    <script src="scripts/index.js"></script>
+    <script src="scripts/show-menu.js"></script>
 </body>
 </html>
