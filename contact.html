@@ -10,8 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,900;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styleContact.css">
+    <link rel="stylesheet" href="css/gen-styles.css">
+    <link rel="stylesheet" href="css/contact-styles.css">
 
     <!-- Leaflet CSS file -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
@@ -23,18 +23,14 @@
 
 </head>
 <body>
-    <header class="hero">
+    <header class="hero flex">
+        <a href="index.html" class="logo">
+            <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
+        </a>
+
         <nav class="nav flex">
-
-            <a href="index.html" class="logo">
-                <img src="assets/logo/logo.png" alt="Logo" class="logo__img">
-            </a>
-
-            <div class="items flex">
-                <a href="index.html" class="item">Inicio</a>
-                <a href="about.html" class="item">Nosotrxs</a>
-                <a href="appointment.html" class="item">Citas</a>
-                <a href="contact.html" class="item">Contacto</a>
+            <div class="items items--remove flex">
+                <img class="menu__icon" src="assets/icons/menu-icon.svg" alt="menu icon">
             </div>
         </nav>
     </header>
@@ -86,7 +82,7 @@
 
     <footer class="footer flex">
 
-        <div class="index__footer flex column">
+        <div class="footer__icons flex column">
             <a href="index.html" class="logo footer__logo">
                 <img src="assets/logo/dark-logo.png" alt="Logo" class="logo__img">
             </a>
@@ -159,5 +155,6 @@
     </footer>
 
     <script src="scripts/whatsapp.js"></script>
+    <script src="scripts/show-menu.js"></script>
 </body>
 </html>

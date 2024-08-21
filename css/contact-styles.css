@@ -10,6 +10,7 @@
     flex-direction: column;
 }
 #map {
+    z-index: -1;
     margin-top: 2rem;
     height: 50rem;
     width: 100%;
@@ -26,6 +27,7 @@
     padding: 2rem auto;
 }
 .additional {
+    padding: 1rem;
     flex-direction: column;
     gap: 2rem;
 }
