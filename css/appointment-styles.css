@@ -152,6 +152,9 @@ tr {
     color: var(--light);
     font-weight: 500;
 }
+.fc-day {
+    cursor: pointer;
+}
 /*MEDIA QUERIES*/
 @media (min-width: 768px) {
     .info__fields {
