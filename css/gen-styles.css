@@ -45,8 +45,6 @@ h2 {
     font-weight: 600;
     margin: 0;
 }
-
-
 /*GENERAL CLASSES*/
 .container {
     width: 95%;
@@ -61,6 +59,8 @@ h2 {
     display: none;
 }
 .hero {
+    position: relative;
+    z-index: 10;
     margin-bottom: 3.5rem;
     padding: 1rem;
     align-items: center;
@@ -286,29 +286,10 @@ h2 {
         width: max-content;
     }
     .menu--show {
-        left: 120rem;
-        right: 0;
-        bottom: 0;
-        top: 0;
+        left: auto;
         padding: 2rem;
+        width: 35rem;
     }
-    .footer {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 1rem;
-        justify-content: space-between;
-    }
-    .contact__items, .policies {
-        width: auto;
-    }
-    .newsletter__form {
-        flex-direction: row;
-    }
-}
-
-/*MEDIA QUERIES*/
-@media (min-width: 768px) {
     .footer {
         display: flex;
         flex-direction: row;
