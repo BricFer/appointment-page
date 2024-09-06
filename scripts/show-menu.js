@@ -27,7 +27,7 @@ menu.addEventListener('click', () => {
                     <div class="items flex">
                         <a href="index.html" class="item">Inicio</a>
                         <a href="about.html" class="item">Nosotrxs</a>
-                        <a href="appointment.html" class="item">Citas</a>
+                        <a href="appointment.html" class="item">Reservar</a>
                         <a href="contact.html" class="item">Contacto</a>
                     </div>
         
