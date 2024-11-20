@@ -19,17 +19,8 @@ body.index::after {
 main.index {
     height: 50rem;
 }
-.index__footer {
-    width: 20rem;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
 @media (min-width: 768px) {
-    body.index {
-        height: 100vh;
-    }
-    footer.index {
+    .footer {
         position: absolute;
         bottom: 0;
     }
