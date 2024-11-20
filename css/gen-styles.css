@@ -25,6 +25,7 @@ body {
     font-size: 16px;
     font-family: var(--body-font);
     color: var(--darkish);
+    min-height: 100vh;
 }
 a {
     text-decoration: none;
@@ -48,6 +49,10 @@ h2 {
 /*GENERAL CLASSES*/
 .container {
     width: 95%;
+}
+.title {
+    color: var(--darkish_55);
+    letter-spacing: .3rem;
 }
 .flex {
     display: flex;
@@ -163,9 +168,10 @@ h2 {
 .container {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 3rem;
     margin: auto auto 5rem auto;
     width: 100%;
+    padding: 2rem;
 }
 .img{
     display: block;
@@ -224,6 +230,7 @@ h2 {
 .policies a {
     display: block;
     color: var(--primary);
+    color: dar;
 }
 .newsletter {
     width: 100%;
@@ -312,8 +319,6 @@ h2 {
     }
     .newsletter {
         margin-left: auto;
-    }
-    .newsletter {
         max-width: 65rem;
     }
 }
